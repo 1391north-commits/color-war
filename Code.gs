@@ -998,8 +998,23 @@ body {
     Helvetica,
     sans-serif;
 
-  background:
+  background-color:
     #f1f3f4;
+
+  background-image:
+    url('data:image/png;base64,${BACKGROUND_IMAGE_BASE64}');
+
+  background-size:
+    cover;
+
+  background-position:
+    top center;
+
+  background-repeat:
+    no-repeat;
+
+  background-attachment:
+    fixed;
 
   color:
     #202124;
