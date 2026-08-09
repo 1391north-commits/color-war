@@ -3215,7 +3215,7 @@ function renderScoreView(data) {
     '<div class="dayTotal">' +
 
       '<div class="dayName">' +
-        'DAY 1' +
+        'יום טוב' +
       '</div>' +
 
       '<div class="dayNumbers">' +
@@ -3244,7 +3244,7 @@ function renderScoreView(data) {
     '<div class="dayTotal">' +
 
       '<div class="dayName">' +
-        'DAY 2' +
+        'שבת' +
       '</div>' +
 
       '<div class="dayNumbers">' +
