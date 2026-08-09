@@ -39,10 +39,11 @@ const LOG_SHEET = 'Log';
  * Judge 14 = AU:AV
  * Judge 15 = AX:AY
  * Judge 16 = BA:BB
+ * Judge 17 = BD:BE
  *
- * BC / BD / BE / BF / BG = IGNORED
- * BH                      = TOTAL BLUE JUDGE SCORES
- * BI                      = TOTAL RED JUDGE SCORES
+ * BC / BF / BG = IGNORED
+ * BH            = TOTAL BLUE JUDGE SCORES
+ * BI            = TOTAL RED JUDGE SCORES
  *******************************************************/
 
 const JUDGE_PAIRS = [
@@ -61,7 +62,8 @@ const JUDGE_PAIRS = [
   [44, 45],   // AR:AS
   [47, 48],   // AU:AV
   [50, 51],   // AX:AY
-  [53, 54]    // BA:BB
+  [53, 54],   // BA:BB
+  [56, 57]    // BD:BE
 ];
 
 
