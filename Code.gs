@@ -40,9 +40,9 @@ const LOG_SHEET = 'Log';
  * Judge 15 = AX:AY
  * Judge 16 = BA:BB
  *
- * BC / BD = IGNORED
- * BE       = TOTAL BLUE JUDGE SCORES
- * BF       = TOTAL RED JUDGE SCORES
+ * BC / BD / BE / BF / BG = IGNORED
+ * BH                      = TOTAL BLUE JUDGE SCORES
+ * BI                      = TOTAL RED JUDGE SCORES
  *******************************************************/
 
 const JUDGE_PAIRS = [
@@ -644,8 +644,8 @@ function getRowScoreData(
    * E = final Blue
    * F = final Red
    * G = number of judges
-   * BE = raw Blue total
-   * BF = raw Red total
+   * BH = raw Blue total
+   * BI = raw Red total
    */
 
   const finalBlue =
@@ -670,20 +670,20 @@ function getRowScoreData(
 
 
   /*
-   * BE = column 57
-   * BF = column 58
+   * BH = column 60
+   * BI = column 61
    */
 
   const rawBlue =
     sheet
-      .getRange(row, 57)
+      .getRange(row, 60)
       .getDisplayValue()
       .trim();
 
 
   const rawRed =
     sheet
-      .getRange(row, 58)
+      .getRange(row, 61)
       .getDisplayValue()
       .trim();
 
@@ -3623,7 +3623,7 @@ function createRawTotals(
 
   /*
    * THESE ARE READ DIRECTLY
-   * FROM BE AND BF.
+   * FROM BH AND BI.
    *
    * NO CALCULATION HERE.
    */
