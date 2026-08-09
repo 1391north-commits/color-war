@@ -3168,7 +3168,7 @@ function renderScoreView(data) {
     '<div class="totalBox blueTotal">' +
 
       '<div class="totalTeam">' +
-        '🔵 BLUE' +
+        '🔵 Blue יום טוב' +
       '</div>' +
 
       '<div class="totalNumber">' +
@@ -3181,7 +3181,7 @@ function renderScoreView(data) {
     '<div class="totalBox redTotal">' +
 
       '<div class="totalTeam">' +
-        '🔴 RED' +
+        '🔴 Red שבת' +
       '</div>' +
 
       '<div class="totalNumber">' +
@@ -3215,7 +3215,7 @@ function renderScoreView(data) {
     '<div class="dayTotal">' +
 
       '<div class="dayName">' +
-        'Blue יום טוב' +
+        'DAY 1' +
       '</div>' +
 
       '<div class="dayNumbers">' +
@@ -3244,7 +3244,7 @@ function renderScoreView(data) {
     '<div class="dayTotal">' +
 
       '<div class="dayName">' +
-        'Red שבת' +
+        'DAY 2' +
       '</div>' +
 
       '<div class="dayNumbers">' +
