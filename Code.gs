@@ -1546,6 +1546,12 @@ select {
     0 3px 9px
     rgba(0,0,0,.17);
 
+  min-width:
+    0;
+
+  overflow-wrap:
+    anywhere;
+
 }
 
 
@@ -1617,6 +1623,12 @@ select {
   box-shadow:
     0 1px 5px
     rgba(0,0,0,.10);
+
+  min-width:
+    0;
+
+  overflow-wrap:
+    anywhere;
 
 }
 
