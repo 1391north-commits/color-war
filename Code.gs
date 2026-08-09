@@ -1570,7 +1570,7 @@ select {
 .totalTeam {
 
   font-size:
-    14px;
+    20px;
 
   font-weight:
     900;
@@ -3896,7 +3896,7 @@ function formatNumber(value) {
   return n
     .toFixed(2)
     .replace(/0+$/, '')
-    .replace(/\.$/, '');
+    .replace(/\\.$/, '');
 
 }
 
