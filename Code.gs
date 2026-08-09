@@ -3894,7 +3894,7 @@ function formatNumber(value) {
 
 
   return n
-    .toFixed(2)
+    .toFixed(4)
     .replace(/0+$/, '')
     .replace(/\\.$/, '');
 
