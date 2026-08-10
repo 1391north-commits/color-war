@@ -1589,6 +1589,23 @@ select {
 }
 
 
+.differential {
+
+  text-align:
+    center;
+
+  font-size:
+    16px;
+
+  font-weight:
+    900;
+
+  margin:
+    -10px 0 20px;
+
+}
+
+
 .dayTotals {
 
   display:
@@ -1667,6 +1684,38 @@ select {
 .dayRed {
   color:
     #d93025;
+}
+
+
+.dayDifferential {
+
+  margin-top:
+    4px;
+
+  font-size:
+    12px;
+
+  font-weight:
+    900;
+
+}
+
+
+.diffBlue {
+  color:
+    #1a73e8;
+}
+
+
+.diffRed {
+  color:
+    #d93025;
+}
+
+
+.diffTie {
+  color:
+    #5f6368;
 }
 
 
@@ -2951,6 +3000,13 @@ function saveScore() {
           '✓ SCORE SAVED';
 
 
+        document
+          .getElementById(
+            'judgeSelect'
+          )
+          .value = '';
+
+
         /*
          * Automatically move to
          * the next option in a
@@ -3209,8 +3265,62 @@ function renderScoreView(data) {
 
 
   /*
+   * COMBINED DIFFERENTIAL
+   */
+
+  const combinedDiff =
+    computeDifferential(
+      combinedBlue,
+      combinedRed
+    );
+
+
+  const combinedDiffDiv =
+    document.createElement(
+      'div'
+    );
+
+
+  combinedDiffDiv.className =
+    'differential ' +
+    combinedDiff.cssClass;
+
+
+  combinedDiffDiv.textContent =
+    'DIFFERENTIAL: ' +
+    combinedDiff.text;
+
+
+  container.appendChild(
+    combinedDiffDiv
+  );
+
+
+  /*
    * DAY TOTALS
    */
+
+  const day1Diff =
+    computeDifferential(
+      numericValue(
+        data.totals.day1.blue
+      ),
+      numericValue(
+        data.totals.day1.red
+      )
+    );
+
+
+  const day2Diff =
+    computeDifferential(
+      numericValue(
+        data.totals.day2.blue
+      ),
+      numericValue(
+        data.totals.day2.red
+      )
+    );
+
 
   const dayTotals =
     document.createElement(
@@ -3250,6 +3360,12 @@ function renderScoreView(data) {
 
       '</div>' +
 
+      '<div class="dayDifferential ' +
+        day1Diff.cssClass +
+        '">' +
+        day1Diff.text +
+      '</div>' +
+
     '</div>' +
 
 
@@ -3277,6 +3393,12 @@ function renderScoreView(data) {
           ) +
         '</span>' +
 
+      '</div>' +
+
+      '<div class="dayDifferential ' +
+        day2Diff.cssClass +
+        '">' +
+        day2Diff.text +
       '</div>' +
 
     '</div>';
@@ -3823,6 +3945,61 @@ function createJudgeBubbles(
 
 
   return container;
+
+}
+
+
+/*******************************************************
+ * DIFFERENTIAL
+ *******************************************************/
+
+function computeDifferential(blue, red) {
+
+  const diff =
+    blue - red;
+
+
+  if (diff > 0) {
+
+    return {
+
+      text:
+        'BLUE +' +
+        formatNumber(diff),
+
+      cssClass:
+        'diffBlue'
+
+    };
+
+  }
+
+
+  if (diff < 0) {
+
+    return {
+
+      text:
+        'RED +' +
+        formatNumber(
+          Math.abs(diff)
+        ),
+
+      cssClass:
+        'diffRed'
+
+    };
+
+  }
+
+
+  return {
+
+    text: 'TIED',
+
+    cssClass: 'diffTie'
+
+  };
 
 }
 
