@@ -1591,6 +1591,12 @@ select {
 
 .differential {
 
+  display:
+    block;
+
+  width:
+    fit-content;
+
   text-align:
     center;
 
@@ -1600,9 +1606,39 @@ select {
   font-weight:
     900;
 
-  margin:
-    12px 0 20px;
+  padding:
+    6px 16px;
 
+  border-radius:
+    20px;
+
+  margin:
+    12px auto 20px;
+
+}
+
+
+.differential.diffBlue {
+  background:
+    #1a73e8;
+  color:
+    white;
+}
+
+
+.differential.diffRed {
+  background:
+    #d93025;
+  color:
+    white;
+}
+
+
+.differential.diffTie {
+  background:
+    #5f6368;
+  color:
+    white;
 }
 
 
