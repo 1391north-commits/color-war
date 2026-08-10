@@ -3963,7 +3963,7 @@ function computeDifferential(blue, red) {
     return {
 
       text:
-        'BLUE +' +
+        'Blue יום טוב +' +
         formatNumber(diff),
 
       cssClass:
@@ -3979,7 +3979,7 @@ function computeDifferential(blue, red) {
     return {
 
       text:
-        'RED +' +
+        'Red שבת +' +
         formatNumber(
           Math.abs(diff)
         ),
