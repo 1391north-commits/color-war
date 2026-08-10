@@ -1601,7 +1601,7 @@ select {
     900;
 
   margin:
-    -10px 0 20px;
+    12px 0 20px;
 
 }
 
@@ -3287,7 +3287,6 @@ function renderScoreView(data) {
 
 
   combinedDiffDiv.textContent =
-    'DIFFERENTIAL: ' +
     combinedDiff.text;
 
 
