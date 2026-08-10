@@ -3236,7 +3236,7 @@ function renderScoreView(data) {
     '<div class="totalBox blueTotal">' +
 
       '<div class="totalTeam">' +
-        '🔵 Blue יום טוב' +
+        '🔵 יום טוב' +
       '</div>' +
 
       '<div class="totalNumber">' +
@@ -3249,7 +3249,7 @@ function renderScoreView(data) {
     '<div class="totalBox redTotal">' +
 
       '<div class="totalTeam">' +
-        '🔴 Red שבת' +
+        '🔴 שבת' +
       '</div>' +
 
       '<div class="totalNumber">' +
@@ -3963,7 +3963,7 @@ function computeDifferential(blue, red) {
     return {
 
       text:
-        'Blue יום טוב +' +
+        'יום טוב +' +
         formatNumber(diff),
 
       cssClass:
@@ -3979,7 +3979,7 @@ function computeDifferential(blue, red) {
     return {
 
       text:
-        'Red שבת +' +
+        'שבת +' +
         formatNumber(
           Math.abs(diff)
         ),
